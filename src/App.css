@@ -1,0 +1,160 @@
+:root {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5; /* Light grey background */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* The Card Container */
+.app-card {
+  background: white;
+  width: 100%;
+  max-width: 450px;
+  min-height: 80vh;
+  border-radius: 24px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  overflow: hidden;
+}
+
+/* Header Section */
+.todo-header {
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+.avatar-small {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.greeting {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* Form Section */
+.todo-form {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.todo-form input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 2px solid #f0f0f0;
+  border-radius: 12px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.todo-form input:focus {
+  border-color: #06C755; /* LINE Green */
+}
+
+.add-btn {
+  background-color: #06C755;
+  color: white;
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+/* Task List Section */
+.task-list {
+  padding: 0 20px;
+  flex: 1;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #f9f9f9;
+  transition: all 0.2s;
+}
+
+.task-text {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #444;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-right: 15px;
+  position: relative;
+}
+
+.task-item.done .checkbox {
+  background-color: #06C755;
+  border-color: #06C755;
+}
+
+.task-item.done .checkbox::after {
+  content: '✓';
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+}
+
+.task-item.done .task-text {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.empty-msg, .todo-footer {
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+.todo-footer {
+  border-top: 1px solid #eee;
+  margin-top: auto;
+}
