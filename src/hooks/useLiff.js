@@ -9,7 +9,6 @@ export const useLiff = () => {
   useEffect(() => {
     const initLiff = async () => {
       try {
-        console.log(import.meta.env.VITE_LIFF_ID );
         // 1. Initialize LIFF
         await liff.init({ 
           liffId: import.meta.env.VITE_LIFF_ID 
